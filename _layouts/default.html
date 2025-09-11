@@ -7,9 +7,36 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  {% include header.html %}
-  <main class="container">
-    {{ content }}
-  </main>
+  <header>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </header>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="{{ '/assets/img/profile.webp' | relative_url }}" alt="Foto Profil">
+        <h2>Iwan Perkilo</h2>
+        <p>Web Developer & Freelancer</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#profil">Profil Singkat</a></li>
+          <li><a href="#self-learning">Self-Learning</a></li>
+          <li><a href="#skills">Keahlian</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#download">Download Resume</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      {{ content }}
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 with.web.id. All rights reserved.
+  </footer>
 </body>
 </html>
