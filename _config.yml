@@ -1,6 +1,6 @@
 title: My Resume - Blogger Template
 description: Dokumentasi interaktif template Blogger My Resume
 baseurl: "" # kosong jika root repo
-url: "https://username.github.io" # ganti dengan GitHub Pages URL-mu
+url: "https://iwanperkilo.github.io/blogger-resume-docs/" # ganti dengan GitHub Pages URL-mu
 theme: minima
 markdown: kramdown
