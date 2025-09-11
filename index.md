@@ -1,49 +1,42 @@
 ---
 layout: default
-title: Dokumentasi
+title: Dokumentasi Tema My Resume
 ---
 
-# My Resume - Blogger Template
-
-![Screenshot](assets/img/screenshot.png)
-
-## Profil
 <section id="profil">
-**Nama & Foto:** bisa diubah via Tata Letak → HTML1  
-- Nama, jabatan, foto profil
+## Profil Singkat
+Seorang Pengembang WordPress otodidak dengan kemampuan membangun situs responsif dan SEO-friendly.
 </section>
 
-## Kontak
-<section id="kontak">
-**Info Kontak:** HTML2  
-- WhatsApp, Email, Website
+<section id="self-learning">
+## Self-Learning
+- Belajar WordPress & Web Development secara otodidak.
+- Menguasai HTML, CSS, PHP, SEO, Page Builder.
 </section>
 
-## Download Resume
+<section id="skills">
+## Keahlian dan Kemampuan
+- Instalasi & Kustomisasi WordPress
+- WooCommerce & Plugin
+- Desain Responsif & SEO
+</section>
+
+<section id="portfolio">
+## Portfolio
+<a class="portfolio-item" href="https://sekolah.legalweb.site" target="_blank">
+<img src="{{ '/assets/img/portfolio1.webp' | relative_url }}" alt="Project 1">
+<h3>Website Sekolah</h3>
+<p>Desain modern dengan fitur jadwal, berita, dan galeri sekolah.</p>
+</a>
+
+<a class="portfolio-item" href="https://toko.built.web.id" target="_blank">
+<img src="{{ '/assets/img/portfolio2.webp' | relative_url }}" alt="Project 2">
+<h3>Toko Online</h3>
+<p>Integrasi WooCommerce dengan pembayaran online.</p>
+</a>
+</section>
+
 <section id="download">
-**Link Download:** HTML3  
+## Download Resume
 [Download Resume](https://drive.google.com/uc?export=download&id=1pqTzjnOHE68mNrWnq6R_KWxf69nQDnL4)
 </section>
-
-## Profil Singkat
-<section id="profil-singkat">
-HTML4 → Edit bio singkat
-</section>
-
-## Self-Learning / Pendidikan
-<section id="self-learning">
-HTML5 → List skill / pendidikan / pengalaman belajar
-</section>
-
-## Keahlian
-<section id="keahlian">
-HTML6 → List keahlian teknis, software, tools
-</section>
-
-## Portfolio
-<section id="portfolio">
-HTML7–HTML10 → Gambar project, judul, deskripsi, link
-</section>
-
-## Footer
-Footer di template → bisa diedit di HTML langsung
