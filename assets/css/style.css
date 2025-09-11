@@ -1,146 +1,68 @@
-/* Global */
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f9f9f9;
-  color: #2c3e50;
-  line-height: 1.6;
-}
+    /* Reset & basic */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f7f7f7; color: #333; display: flex; min-height: 100vh; }
 
-header {
-  background: #e84e1b;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  border-radius: 0 0 12px 12px;
-}
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #2c3e50;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding-top: 20px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .sidebar h2 { text-align:center; margin-bottom: 20px; font-size: 1.5rem; }
+    .sidebar nav a {
+      display: block;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .sidebar nav a.active,
+    .sidebar nav a:hover { background: #e84e1b; }
 
-.wrapper {
-  display: flex;
-  max-width: 1100px;
-  margin: 20px auto;
-  gap: 30px;
-}
+    /* Hamburger mobile */
+    .hamburger {
+      display: none;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 1.8rem;
+      background: #2c3e50;
+      color: #fff;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1001;
+    }
 
-/* Sidebar */
-.sidebar {
-  flex: 1;
-  min-width: 250px;
-  background: #2c3e50;
-  color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-}
+    /* Content */
+    .content {
+      flex: 1;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 { font-size: 2rem; margin-bottom: 10px; }
+    h2 { color: #e84e1b; margin-top: 40px; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+    pre { background: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto; }
+    ul, ol { padding-left: 20px; margin-bottom: 20px; }
+    footer { text-align: center; padding: 20px; background: #2c3e50; color: #fff; margin-top: 40px; }
 
-.sidebar img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 6px solid #e84e1b;
-  display: block;
-  margin: 0 auto 20px auto;
-}
-
-.sidebar h2 {
-  text-align: center;
-  margin: 0 0 5px 0;
-}
-
-.sidebar p {
-  text-align: center;
-  font-size: 14px;
-}
-
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar nav ul li {
-  margin: 12px 0;
-}
-
-.sidebar nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.sidebar nav ul li a:hover {
-  color: #e84e1b;
-}
-
-/* Content */
-.content {
-  flex: 2;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.content h2 {
-  color: #e84e1b;
-  margin-top: 1em;
-}
-
-.content hr {
-  border: 2px solid #e84e1b;
-  width: 60px;
-  margin-left: 0;
-}
-
-/* Portfolio items */
-.portfolio-item {
-  display: block;
-  background: #f3f3f3;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s;
-}
-
-.portfolio-item:hover {
-  transform: translateY(-5px);
-}
-
-.portfolio-item img {
-  width: 100%;
-  display: block;
-}
-
-.portfolio-item h3 {
-  color: #e84e1b;
-  margin: 10px 15px 5px;
-}
-
-.portfolio-item p {
-  margin: 0 15px 15px;
-  font-size: 14px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin: 40px 0 20px 0;
-  font-size: 14px;
-  color: #555;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .wrapper {
-    flex-direction: column;
-  }
-  .sidebar {
-    width: 100%;
-    min-width: auto;
-    text-align: center;
-  }
-  .sidebar nav ul li {
-    display: inline-block;
-    margin: 10px 10px 0 0;
-  }
-}
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      body { flex-direction: column; }
+      .sidebar { 
+        position: fixed; 
+        top: 0; left: 0; 
+        transform: translateX(-100%);
+        z-index: 1000;
+      }
+      .sidebar.show { transform: translateX(0); }
+      .hamburger { display: block; }
+      .content { padding: 70px 20px 20px; }
+    }
