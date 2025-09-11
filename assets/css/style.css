@@ -52,6 +52,51 @@
     pre { background: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto; }
     ul, ol { padding-left: 20px; margin-bottom: 20px; }
     footer { text-align: center; padding: 20px; background: #2c3e50; color: #fff; margin-top: 40px; }
+    /* Demo & Download Section */
+    #demo-download {
+      margin-top: 40px;
+      text-align: center;
+    }
+    
+    #demo-download h2 {
+      color: #e84e1b;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap; /* agar responsive */
+    }
+    
+    .button-container .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      color: #fff;
+    }
+    
+    .button-container .demo-btn {
+      background: #e84e1b;
+    }
+    
+    .button-container .demo-btn:hover {
+      background: #d13f0f;
+    }
+    
+    .button-container .download-btn {
+      background: #3498db;
+    }
+    
+    .button-container .download-btn:hover {
+      background: #217dbb;
+    }
 
     /* Responsive */
     @media screen and (max-width: 768px) {
