@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Resume Template - Dokumentasi</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="hamburger">&#9776;</div>
+
+<aside class="sidebar">
+  <h2>My Resume Docs</h2>
+  <nav>
+    <a href="#installation">Instalasi</a>
+    <a href="#layout">Struktur Layout</a>
+    <a href="#customization">Kustomisasi</a>
+    <a href="#widgets">Widgets</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</aside>
+
+<main class="content">
+  <h1>My Resume Template</h1>
+  <p>Dokumentasi Tema Blogger "My Resume"</p>
+
+  <section id="installation">
+    <h2>Instalasi</h2>
+    <ol>
+      <li>Download file XML tema dari repo / link resmi.</li>
+      <li>Buka Blogger → Tema → Cadangkan / Pulihkan → Pilih file XML.</li>
+      <li>Upload dan terapkan tema.</li>
+    </ol>
+  </section>
+
+  <section id="layout">
+    <h2>Struktur Layout</h2>
+    <ul>
+      <li><strong>Kiri:</strong> Informasi profil, foto, nama.</li>
+      <li><strong>Kanan:</strong> Kontak, keahlian, resume download, deskripsi singkat.</li>
+      <li>Section tambahan: Self-Learning, Keahlian, Portfolio, Footer.</li>
+    </ul>
+  </section>
+
+  <section id="customization">
+    <h2>Kustomisasi Warna & Tampilan</h2>
+    <ul>
+      <li>bodyColor: Warna body</li>
+      <li>darkColor: Warna teks gelap</li>
+      <li>lightColor: Warna teks terang</li>
+      <li>accentColor: Warna aksen (judul, link, button)</li>
+      <li>bg1Color - bg4Color: Background section berbeda</li>
+      <li>borderColor: Border foto profil dan elemen aksen</li>
+    </ul>
+  </section>
+
+  <section id="widgets">
+    <h2>Widgets & Bagian yang Bisa Diedit</h2>
+    <ul>
+      <li>Nama dan Foto: Widget HTML1</li>
+      <li>Kontak: Widget HTML2</li>
+      <li>Download Resume: Widget HTML3</li>
+      <li>Profil Singkat: Widget HTML4</li>
+      <li>Self-Learning: Widget HTML5</li>
+      <li>Keahlian dan Kemampuan: Widget HTML6</li>
+      <li>Portfolio: Widget HTML7-10</li>
+    </ul>
+  </section>
+
+  <section id="portfolio">
+    <h2>Menambahkan Portfolio</h2>
+    <pre><code>&lt;a class="portfolio-item" href="LINK_PROJECT"&gt;
+  &lt;img src="GAMBAR_PROJECT" alt="Nama Project"&gt;
+  &lt;h3>Judul Project&lt;/h3&gt;
+  &lt;p>Deskripsi Project&lt;/p&gt;
+&lt;/a&gt;</code></pre>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <ul>
+      <li>Responsif: Ya</li>
+      <li>Ubah font: Bisa melalui CSS</li>
+      <li>Lisensi: Free Personal Use</li>
+    </ul>
+  </section>
+
+  <footer>
+    &copy; 2025 My Resume Template. Dokumentasi oleh Iwan Perkilo.
+  </footer>
+</main>
+
+<script>
+  // Hamburger toggle
+  const hamburger = document.querySelector('.hamburger');
+  const sidebar = document.querySelector('.sidebar');
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('show');
+  });
+
+  // Scroll Spy
+  const sections = document.querySelectorAll('main .content section');
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 80;
+      if (pageYOffset >= sectionTop) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
