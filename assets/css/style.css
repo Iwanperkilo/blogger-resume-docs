@@ -1,117 +1,144 @@
     /* Reset & basic */
-    html {
-      scroll-behavior: smooth;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f7f7f7; color: #333; display: flex; min-height: 100vh; }
+        html {
+            scroll-behavior: smooth;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            background: #f7f7f7; 
+            color: #333; 
+            display: flex; 
+            min-height: 100vh; 
+            flex-direction: column; /* Menggunakan kolom sebagai default */
+        }
 
-    /* Sidebar */
-    .sidebar {
-      width: 250px;
-      background: #2c3e50;
-      color: #fff;
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      height: -webkit-fill-available;
-      padding-top: 20px;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-    .sidebar h2 { text-align:center; margin-bottom: 20px; font-size: 1.5rem; }
-    .sidebar nav a {
-      display: block;
-      padding: 10px 20px;
-      color: #fff;
-      text-decoration: none;
-    }
-    .sidebar nav a.active,
-    .sidebar nav a:hover { background: #e84e1b; }
+        /* --- Sidebar --- */
+        .sidebar {
+            width: 250px;
+            background: #2c3e50;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            height: -webkit-fill-available;
+            padding-top: 20px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        .sidebar h2 { text-align:center; margin-bottom: 20px; font-size: 1.5rem; }
+        .sidebar nav a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .sidebar nav a.active,
+        .sidebar nav a:hover { background: #e84e1b; }
 
-    /* Hamburger mobile */
-    .hamburger {
-      display: none;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      font-size: 1.3rem;
-      background: #2c3e50;
-      color: #fff;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 5px;
-      z-index: 1001;
-    }
+        /* --- Hamburger mobile --- */
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 1.3rem;
+            background: #2c3e50;
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1001;
+        }
 
-    /* Content */
-    .content {
-      flex: 1;
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1 { font-size: 2rem; margin-bottom: 10px; }
-    h2 { color: #e84e1b; margin-top: 40px; }
-    code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
-    pre { background: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto; }
-    ul, ol { padding-left: 20px; margin-bottom: 20px; }
-    footer { text-align: center; padding: 20px; background: #2c3e50; color: #fff; margin-top: 40px; }
-    /* Demo & Download Section */
-    #demo-download {
-      margin-top: 40px;
-      text-align: center;
-    }
-    
-    #demo-download h2 {
-      color: #e84e1b;
-      margin-bottom: 20px;
-      font-size: 1.8rem;
-    }
-    
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap; /* agar responsive */
-    }
-    
-    .button-container .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      font-size: 1rem;
-      font-weight: bold;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      color: #fff;
-    }
-    
-    .button-container .demo-btn {
-      background: #e84e1b;
-    }
-    
-    .button-container .demo-btn:hover {
-      background: #d13f0f;
-    }
-    
-    .button-container .download-btn {
-      background: #3498db;
-    }
-    
-    .button-container .download-btn:hover {
-      background: #217dbb;
-    }
+        /* --- Content --- */
+        .content {
+            flex: 1;
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            width: 100%; /* Memastikan konten mengisi 100% lebar yang tersedia */
+        }
+        h1 { font-size: 2rem; margin-bottom: 10px; }
+        h2 { color: #e84e1b; margin-top: 40px; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 6px; overflow-x: auto; }
+        ul, ol { padding-left: 20px; margin-bottom: 20px; }
+        footer { text-align: center; padding: 20px; background: #2c3e50; color: #fff; margin-top: 40px; }
+        /* Demo & Download Section */
+        #demo-download {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        #demo-download h2 {
+            color: #e84e1b;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; 
+        }
+        
+        .button-container .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+        
+        .button-container .demo-btn {
+            background: #e84e1b;
+        }
+        
+        .button-container .demo-btn:hover {
+            background: #d13f0f;
+        }
+        
+        .button-container .download-btn {
+            background: #3498db;
+        }
+        
+        .button-container .download-btn:hover {
+            background: #217dbb;
+        }
 
-    /* Responsive */
-    @media screen and (max-width: 768px) {
-      body { flex-direction: column; }
-      .sidebar { 
-        position: fixed; 
-        top: 0; left: 0; 
-        transform: translateX(-100%);
-        z-index: 1000;
-      }
-      .sidebar.show { transform: translateX(0); }
-      .hamburger { display: block; }
-      .content { padding: 70px 20px 20px; }
-    }
+        /* --- Perbaikan utama: Mengatur gambar agar responsif --- */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* --- Responsive --- */
+        @media screen and (max-width: 768px) {
+            body { 
+                flex-direction: column; /* Mengubah kembali ke kolom untuk mobile */
+                min-height: auto; /* Mengatur ulang tinggi minimum */
+            }
+            .sidebar { 
+                position: fixed; 
+                top: 0; 
+                left: 0; 
+                transform: translateX(-100%);
+                z-index: 1000;
+                height: 100%; /* Memastikan sidebar mengisi seluruh tinggi layar */
+            }
+            .sidebar.show { transform: translateX(0); }
+            .hamburger { display: block; }
+            .content { padding: 70px 20px 20px; }
+        }
+
+        /* --- Menambahkan media query untuk desktop --- */
+        @media screen and (min-width: 769px) {
+            body {
+                flex-direction: row; /* Mengubah ke baris untuk desktop */
+            }
+        }
