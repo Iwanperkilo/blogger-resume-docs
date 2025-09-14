@@ -4,8 +4,8 @@ Template **Blogger Gratis** untuk membuat halaman **resume online** yang modern,
 Repo ini adalah pusat release resmi untuk **My Resume**.  
 
 [![Documentation](https://img.shields.io/badge/Visit-Documentation-blue?style=for-the-badge)](https://resumedoc.with.web.id/)
-[![Latest Release](https://img.shields.io/github/v/release/username/repo?style=for-the-badge)](https://github.com/username/repo/releases/latest)
-[![Total Downloads](https://img.shields.io/github/downloads/username/repo/total?style=for-the-badge)](https://github.com/username/repo/releases)
+[![Latest Release](https://img.shields.io/github/v/release/Iwanperkilo/repo?style=for-the-badge)](https://github.com/Iwanperkilo/repo/releases/latest)
+[![Total Downloads](https://img.shields.io/github/downloads/Iwanperkilo/repo/total?style=for-the-badge)](https://github.com/Iwanperkilo/repo/releases)
 
 ---
 
