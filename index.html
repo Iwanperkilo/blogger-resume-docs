@@ -14,11 +14,17 @@
   <h2>My Resume Docs</h2>
   <nav>
     <a href="#installation">Instalasi</a>
+    <a href="#requirements">Persyaratan</a>
+    <a href="#update-guide">Update Template</a>
     <a href="#layout">Struktur Layout</a>
     <a href="#customization">Kustomisasi</a>
     <a href="#widgets">Widgets</a>
+    <a href="#social-icons">Ikon Sosial</a>
+    <a href="#skills">Progress Bar</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#faq">FAQ</a>
+    <a href="#changelog">Changelog</a>
+    <a href="#support">Support</a>
     <a href="#demo-download">Download</a>
   </nav>
 </aside>
@@ -26,14 +32,14 @@
 <main class="content">
   <h1>My Resume Template</h1>
   <p>Dokumentasi Tema Blogger "My Resume"</p>
-  <p><strong>Versi Terbaru:</strong> <code>v1.1</code></p>
+  <p><strong>Versi Terbaru:</strong> <code>v1.2</code></p>
 
   <section id="installation">
     <h2>Instalasi</h2>
     <ol>
       <li>Download file tema dalam format <code>.zip</code> dari link resmi.</li>
       <li>Ekstrak file <code>.zip</code> di komputer Anda.</li>
-      <li>Di dalam folder hasil ekstrak, buka file utama <code>myresume.xml</code> dengan text editor seperti Notepad atau VS Code.</li>
+      <li>Di dalam folder hasil ekstrak, buka file utama <code>myresume.xml</code>.</li>
       <li>Buka Blogger → <strong>Tema</strong> → klik panah bawah pada tombol "Sesuaikan" → pilih <strong>Edit HTML</strong>.</li>
       <li>Hapus semua kode lama (Ctrl + A → Delete).</li>
       <li>Salin semua isi file <code>.xml</code> → tempelkan ke editor HTML Blogger.</li>
@@ -41,6 +47,25 @@
       <li>Refresh blog Anda untuk melihat hasilnya.</li>
     </ol>
     <p><strong>Catatan:</strong> Sebaiknya lakukan instalasi di blog kosong atau buat blog baru agar sesuai dengan demo template</p>
+  </section>
+
+  <section id="requirements">
+    <h2>Persyaratan</h2>
+    <ul>
+      <li>Platform: Blogger terbaru (2025)</li>
+      <li>Browser: Chrome, Edge, Firefox, Safari versi terbaru</li>
+      <li>Resolusi minimum: 320px (mobile)</li>
+    </ul>
+  </section>
+
+  <section id="update-guide">
+    <h2>Cara Update ke Versi Terbaru</h2>
+    <ol>
+      <li>Backup tema lama di Blogger → <strong>Tema</strong> → <strong>Backup</strong>.</li>
+      <li>Download versi terbaru dari halaman <strong>Release</strong>.</li>
+      <li>Buka <strong>Edit HTML</strong> → ganti kode dengan versi baru.</li>
+      <li>Sesuaikan kembali widget (nama, foto, link sosmed).</li>
+    </ol>
   </section>
 
   <section id="layout">
@@ -78,12 +103,34 @@
     </ul>
   </section>
 
+  <section id="social-icons">
+    <h2>Menambahkan & Mengganti Ikon Sosial Media</h2>
+    <p>Template ini menggunakan <strong>Font Awesome</strong> untuk ikon. Contoh:</p>
+    <pre><code>&lt;a href="https://twitter.com/username" target="_blank"&gt;
+  &lt;i class="fab fa-x-twitter"&gt;&lt;/i&gt; Twitter
+&lt;/a&gt;</code></pre>
+    <p>Ganti <code>fab fa-x-twitter</code> dengan ikon lain dari 
+    <a href="https://fontawesome.com/icons" target="_blank">Font Awesome Icons</a>.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Mengatur Progress Bar Skill</h2>
+    <p>Contoh menambahkan skill:</p>
+    <pre><code>&lt;div class="progress-item"&gt;
+  &lt;span&gt;HTML&lt;/span&gt;
+  &lt;div class="progress-bar"&gt;
+    &lt;div class="progress-fill" style="width:90%"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    <p>Ubah <code>width:90%</code> sesuai kemampuan yang ingin ditampilkan.</p>
+  </section>
+
   <section id="portfolio">
     <h2>Menambahkan Portfolio</h2>
     <pre><code>&lt;a class="portfolio-item" href="LINK_PROJECT"&gt;
   &lt;img src="GAMBAR_PROJECT" alt="Nama Project"&gt;
-  &lt;h3>Judul Project&lt;/h3&gt;
-  &lt;p>Deskripsi Project&lt;/p&gt;
+  &lt;h3&gt;Judul Project&lt;/h3&gt;
+  &lt;p&gt;Deskripsi Project&lt;/p&gt;
 &lt;/a&gt;</code></pre>
   </section>
 
@@ -99,6 +146,13 @@
   <section id="changelog">
     <h2>Changelog</h2>
     <ul>
+      <li><strong>v1.2</strong> (Sept 2025)
+        <ul>
+          <li>🌐 Ikon sosial media diganti menggunakan Font Awesome (LinkedIn, Facebook, Instagram, YouTube, X/Twitter)</li>
+          <li>📊 Tambah section Progress Bar Skill</li>
+          <li>🎨 Penyesuaian gaya agar lebih modern</li>
+        </ul>
+      </li>
       <li><strong>v1.1</strong> (Sept 2025)
         <ul>
           <li>✨ Tambah link media sosial</li>
@@ -113,12 +167,18 @@
       </li>
     </ul>
   </section>
+
+  <section id="support">
+    <h2>Dukungan & Kontribusi</h2>
+    <p>Jika menemukan bug atau ingin mengusulkan fitur baru, silakan buka 
+    <a href="https://github.com/Iwanperkilo/blogger-resume-docs/issues" target="_blank">Issues di GitHub</a>.</p>
+  </section>
   
   <section id="demo-download">
     <h2>Demo & Download</h2>
     <div class="button-container">
       <a class="btn demo-btn" href="https://mycv.built.web.id/" target="_blank">Lihat Demo</a>
-      <a class="btn download-btn" href="https://github.com/Iwanperkilo/blogger-resume-docs/releases/download/v1.1/myresume_v1.1.zip" download>Download Tema</a>
+      <a class="btn download-btn" href="https://github.com/Iwanperkilo/blogger-resume-docs/releases/download/v1.2/myresume_v1.2.zip" download>Download Tema</a>
     </div>
   </section>
   
@@ -136,7 +196,7 @@
   });
 
   // Scroll Spy
-  const sections = document.querySelectorAll('main .content section');
+  const sections = document.querySelectorAll('main section');
   const navLinks = document.querySelectorAll('.sidebar nav a');
 
   window.addEventListener('scroll', () => {
