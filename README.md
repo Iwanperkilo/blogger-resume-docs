@@ -11,8 +11,13 @@ Repo ini adalah pusat release resmi untuk **My Resume**.
 
 ## 📌 Changelog
 
+### v1.2
+- 🌐 Ganti ikon sosial media dengan **Font Awesome** (LinkedIn, Facebook, Instagram, YouTube, X/Twitter) agar lebih menarik & mudah dikustomisasi.
+- 📊 Tambah section **Penguasaan Tools** dengan progress bar animasi (HTML, CSS, Dasar PHP, Elementor, Gutenberg, WPBakery).
+- 🎨 Penyesuaian gaya agar tetap ringan, modern, dan responsif.
+
 ### v1.1
-- ✨ Tambah link media sosial
+- ✨ Tambah link media sosial (SVG)
 - ⚡ Tambah warna baru untuk background
 - 🐞 Penambahan CTA
 
@@ -24,4 +29,4 @@ Repo ini adalah pusat release resmi untuk **My Resume**.
 ## 📄 Lisensi
 
 Template **My Resume** dirilis sebagai **Gratis**.  
-Silakan digunakan & dikustomisasi bebas, tapi tidak untuk dijual kembali.
+Silakan digunakan & dikustomisasi bebas, tapi **tidak untuk dijual kembali**.
